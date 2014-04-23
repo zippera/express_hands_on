@@ -1,0 +1,15 @@
+{
+    "name": "express_hands_on",
+    "private": "true",
+    "version": "0.0.0",
+    "description": "Build an express from scratch!",
+    "main": "app.js",
+    "scripts": {},
+    "dependencies": {
+        "express": "*",
+        "mongoose": "*"
+    },
+    "repository": "",
+    "author": "",
+    "license": "BSD"
+}
