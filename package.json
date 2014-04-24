@@ -9,6 +9,10 @@
         "express": "*",
         "mongoose": "*",
         "body-parser": "*",
+        "cookie-parser": "*",
+        "express-session": "*",
+        "morgan": "*",
+        "connect-mongo": "*",
         "jade": "*"
     },
     "repository": "",

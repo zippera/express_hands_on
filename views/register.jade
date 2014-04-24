@@ -1,10 +1,24 @@
 extends layout
 
 block content
+    if error
+        p= error
+    h1 Login
+    form(method='post')
+        div
+            input(type='hidden', name='fnid', value='log')
+            label Name:
+            input(type='text', name='lname')
+        div
+            label Password:
+            input(type='text', name='lpassword')
+        div
+            input(type='submit', value='Login')
     h1 Register
     form(method='post')
         div
-            Label Name:
+            input(type='hidden', name='fnid', value='reg')
+            label Name:
             input(type='text', name='name')
         div 
             label Email:
@@ -16,4 +30,4 @@ block content
             label Password again:
             input(type='password', name='password-repeat')
         div
-            input(type='submit', value='submit')
+            input(type='submit', value='Register')

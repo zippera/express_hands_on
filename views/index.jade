@@ -3,7 +3,15 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  p Users: <br> 
+  p News: <br>
+  ul
+      each val in news
+          li 
+              ul
+                  li= val['title']
+                  li= val['url']
+                  li= val['text']
+  p <br> Users: <br> 
   ul
       each val in users
           li
@@ -11,7 +19,11 @@ block content
                   li= val['name']
                   li= val['email']
                   li= val['password']
-  span: a(href='/reg') Register<br>
-  span: a(href='/log') Login <br>
+  p #{user} hello
+  if user
+      span: a(href='/logout') Logout<br>
+  else
+      span: a(href='/reg') Register/Login<br>
   span: a(href='/users') Users <br>
   span: a(href='/blogs') Blogs <br>
+  span: a(href='/submit') Submit <br>
