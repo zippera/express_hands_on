@@ -7,7 +7,9 @@
     "scripts": {},
     "dependencies": {
         "express": "*",
-        "mongoose": "*"
+        "mongoose": "*",
+        "body-parser": "*",
+        "jade": "*"
     },
     "repository": "",
     "author": "",
