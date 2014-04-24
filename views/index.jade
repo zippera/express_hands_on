@@ -3,7 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  p Users: <br> #{users}
+  p Users: <br> 
+  ul
+      each val in users
+          li
+              ul
+                  li= val['name']
+                  li= val['email']
+                  li= val['password']
   span: a(href='/reg') Register<br>
   span: a(href='/log') Login <br>
   span: a(href='/users') Users <br>

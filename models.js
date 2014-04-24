@@ -5,4 +5,4 @@ var userSchema = new Schema({
     password: String
 });
 
-module.exports = db.model('userModel',userSchema);
+exports.userModel = db.model('userModel',userSchema);

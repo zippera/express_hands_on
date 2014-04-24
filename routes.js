@@ -1,4 +1,5 @@
-var userModel = require('./model');
+var models = require('./models');
+var userModel = models.userModel;
 
 module.exports = function(app){
     app.get('/',function(req,res,next){
@@ -19,10 +20,10 @@ module.exports = function(app){
         var name = req.body.name,
             email = req.body.email,
             password = req.body.password,
-            password_re = req.body.password_repeat;
+            password_re = req.body['password-repeat'];
 
         if (password_re != password){
-            res.redirect('/');
+            return res.redirect('/');
         }
 
 
@@ -34,6 +35,9 @@ module.exports = function(app){
             if (err) return next(err);
             res.send(doc);
         });
+    });
+    app.get('/submit',function(req,res,next){
+        res.render('submit');
     });
     
 }
